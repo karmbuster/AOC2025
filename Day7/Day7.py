@@ -9,7 +9,7 @@ totalSplits = 0
 with open("Misc/Day7/Day7.txt", "r") as f:
 
     for line in f:
-    
+        #print(indexList)
         if firstLine == 1:
             indexList.append(line.find("S"))
             firstLine = 0
@@ -28,6 +28,8 @@ with open("Misc/Day7/Day7.txt", "r") as f:
 
                     #indexList.remove(x)
                     totalSplits += 1
+                else:
+                    tempList.append(indexList[x])
             
             indexList = []
             for y in tempList:
